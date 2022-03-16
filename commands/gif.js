@@ -2,11 +2,11 @@ const axios = require('axios')
 const { MessageEmbed } = require('discord.js')
 
 module.exports = {
-  name: 'cat',
-  description: 'Envia foto de gatinho',
+  name: 'gif',
+  description: 'Envia gif de gatinho',
   execute(message, args) {
     axios
-      .get(`${process.env.THECAT_API_URL}?&size=full&mime_types=jpg&limit=1`, {
+      .get(`${process.env.THECAT_API_URL}?&size=full&mime_types=gif&limit=1`, {
         headers: {
           'x-api-key': process.env.THECAT_API_TOKEN
         }
